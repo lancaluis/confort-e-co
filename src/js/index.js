@@ -23,7 +23,7 @@ function createProductCard(products) {
                 <p class="product__infos__description__title">${name}</p>
                 <p class="product__infos__description__price">${priceFormatted}</p>
             </div>
-            <button id="add-to-cart" class="product__infos__button" onclick="addToCart(${price})">
+            <button id="add-to-cart" class="product__infos__button" onclick="toggleToCart(${price}, '${name}')">
                 add to cart
             </button>
         </div>
@@ -46,5 +46,20 @@ function findProduct() {
     } else {
       products[i].style.display = "none";
     }
+  }
+}
+
+var CART = [];
+
+function addToCart(price, name) {
+  // verify if the obj already exists inside array
+  if (CART.find((item) => item.name === name)) {
+    return;
+  } else {
+    // if do not exist, insert it
+    CART.push({
+      name,
+      price,
+    });
   }
 }
