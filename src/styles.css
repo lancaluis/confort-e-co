@@ -1,89 +1,259 @@
-header {
-    background: #F07272;
-    color: #FFFFFF;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 3rem;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Roboto", sans-serif;
 }
 
-.products {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 1.5rem;
-    gap: 3rem;
-    width: 100%;
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 
-.icon {
-    width: 1.5rem;
+body {
+  line-height: 1;
 }
 
-.box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.5rem;
+ol,
+ul {
+  list-style: none;
 }
 
-/* Search bar component */
-.search-bar {
-    display: flex;
-    align-items: center;
-    border: #F07272 1px solid;
-    padding: 0.5rem;
+blockquote,
+q {
+  quotes: none;
 }
 
-.search-bar input[type=text] {
-    border: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 
-.search-bar input[type=text]:focus {
-    outline: none;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-/* Card component */
 .product {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    border: #C4C4C4 1px solid;
-    border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  border: #c4c4c4 1px solid;
+  border-radius: 5px;
 }
 
 .product__infos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 1rem;
 }
 
 .product__infos__description__price {
-    margin-top: 0.3rem;
-    color: #726C6C;
+  margin-top: 0.3rem;
+  color: #726c6c;
 }
 
 .product__infos__button {
-    text-transform: capitalize;
-    font-weight: bold;
-    color: #F07272;
-    border: none;
-    background: none;
-    padding: 0.3rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: #f07272;
+  border: none;
+  background: none;
+  padding: 0.3rem;
 }
 
 .product__infos__button:hover {
+  color: #FFFFFF;
+  border: #f07272;
+  background: #f07272;
+  transition: all 0.3s;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: #f07272 1px solid;
+  padding: 0.5rem;
+}
+
+.search-bar input[type="text"] {
+  border: none;
+}
+
+.search-bar input[type="text"]:focus {
+  outline: none;
+}
+
+@media (max-width: 1024px) {
+  body {
+    background: #f07272;
     color: #FFFFFF;
-    border: #F07272;
-    background: #F07272;
-    transition: all 0.3s;
-    cursor: pointer;
-    border-radius: 3px;
+  }
+}
+
+header {
+  background: #f07272;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  gap: 3rem;
+  width: 100%;
+}
+
+.icon {
+  width: 1.5rem;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .hidden-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .show-mobile {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.3;
+    margin: 20% 5%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .show-mobile {
+    display: none;
+  }
 }

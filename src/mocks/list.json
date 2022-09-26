@@ -3,36 +3,36 @@
     "name": "Blue couch 1",
     "price": "1115.99",
     "priceFormatted": "1.115,99 €",
-    "imagePath": ""
+    "imagePath": "assets/1.png"
   },
   {
     "name": "Yellow couch",
     "price": "1000.99",
     "priceFormatted": "1.000,99 €",
-    "imagePath": ""
+    "imagePath": "assets/2.png"
   },
   {
     "name": "Brown couch",
     "price": "1220.95",
     "priceFormatted": "1.220,95 €",
-    "imagePath": ""
+    "imagePath": "assets/3.png"
   },
   {
     "name": "Grey couch 1",
     "price": "1500.90",
     "priceFormatted": "1.500,90 €",
-    "imagePath": ""
+    "imagePath": "assets/4.png"
   },
   {
     "name": "Blue couch 2",
     "price": "900",
     "priceFormatted": "900 €",
-    "imagePath": ""
+    "imagePath": "assets/5.png"
   },
   {
     "name": "Grey couch 1",
     "price": "990",
     "priceFormatted": "990 €",
-    "imagePath": ""
+    "imagePath": "assets/6.png"
   }
 ]

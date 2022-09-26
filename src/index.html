@@ -1,52 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/reset.css">
-  <link rel="stylesheet" href="styles.css">
-  <title>Confort & Co</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Confort & Co</title>
+  </head>
+  <body>
+    <h1 class="show-mobile">For a better experience, use a wide window</h1>
 
-  <header>
-    <div class="box">
-      <img src="assets/brand.svg" alt="confort e co brand" class="icon">
-      <p class="brand_title">Confort & Co</p>
-    </div>
-    <div class="box">
-      <img src="assets/cart.svg" alt="cart icon" class="icon">
-      <p class="cart_price">0.00£</p>
-    </div>
-  </header>
+    <header class="hidden-mobile">
+      <div class="box">
+        <img src="assets/brand.svg" alt="confort e co brand" class="icon" />
+        <p class="brand_title">Confort & Co</p>
+      </div>
+      <div class="box">
+        <img src="assets/cart.svg" alt="cart icon" class="icon" />
+        <p id="cart_price">0.00£</p>
+      </div>
+    </header>
 
-  <main>
-    
-    <!-- Search bar component -->
-    <div class="search-bar">
-      <input type="text" placeholder="What are you looking for?">
-      <img src="assets/search.svg" alt="search icon" class="icon">
-    </div>
-
-    <div class="products">
-
-      <!-- Card component -->
-      <div class="product">
-        <img src="assets/image.png" alt="test">
-        <div class="product__infos">
-          <div class="product__infos__description">
-            <p class="product__infos__description__title">Title</p>
-            <p class="product__infos__description__price">0.00£</p>
-          </div>
-
-          <button class="product__infos__button">
-            add to cart
-          </button>
-        </div>
+    <main class="hidden-mobile">
+      <span class="loader"></span>
+      <div class="search-bar">
+        <input type="text" id="search-box" oninput="findProduct()" placeholder="What are you looking for?" />
+        <img src="assets/search.svg" alt="search icon" class="icon" />
       </div>
 
-    </div>
-  </main>
-</body>
+      <div id="products" class="products"></div>
+    </main>
+
+    <footer class="hidden-mobile"></footer>
+    <script src="./js/index.js"></script>
+  </body>
 </html>

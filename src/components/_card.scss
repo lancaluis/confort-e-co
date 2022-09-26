@@ -1,0 +1,39 @@
+@import "../styles/colors.scss";
+
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  border: $lightGray 1px solid;
+  border-radius: 5px;
+}
+
+.product__infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 1rem;
+}
+
+.product__infos__description__price {
+  margin-top: 0.3rem;
+  color: $darkGray;
+}
+
+.product__infos__button {
+  text-transform: capitalize;
+  font-weight: bold;
+  color: $primary;
+  border: none;
+  background: none;
+  padding: 0.3rem;
+}
+
+.product__infos__button:hover {
+  color: $white;
+  border: $primary;
+  background: $primary;
+  transition: all 0.3s;
+  cursor: pointer;
+  border-radius: 3px;
+}

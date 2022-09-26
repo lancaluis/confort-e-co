@@ -1,3 +1,66 @@
-@charset "UTF-8";
+@import "styles/index.scss";
+@import "components/index.scss";
 
-@import 'styles/base.scss';
+body {
+  @media (max-width: 1024px) {
+    background: $primary;
+    color: $white;
+  }
+}
+
+header {
+  background: $primary;
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  gap: 3rem;
+  width: 100%;
+}
+
+.icon {
+  width: 1.5rem;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hidden-mobile {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.show-mobile {
+  @media (max-width: 1024px) {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.3;
+    margin: 20% 5%;
+  }
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
